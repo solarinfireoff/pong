@@ -2,10 +2,23 @@ class Tableau1 extends Phaser.Scene{
     preload(){
         this.load.image("cercle","assets/cercle.png")
         this.load.image("carre","assets/carre.png")
+        this.load.image("fond", "assets/fond.jpg")
+
     }
     create() {
         this.width = 1000;
         this.height = 500;
+
+
+        /**fond image
+         *
+         */
+        this.fond = this.add.image(0,0,'fond').setOrigin(0,0)
+        this.fond.setDisplaySize(this.width,20);
+
+
+
+
         /**
          * Mur Haut
          * @type {Phaser.Physics.Arcade.Sprite & {body: Phaser.Physics.Arcade.Body}}
