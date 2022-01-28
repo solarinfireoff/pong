@@ -3,7 +3,7 @@ class Tableau1 extends Phaser.Scene{
 
 
     preload(){
-        this.load.image('square','assets/motif.JPG');
+        this.load.image('square','carre.png');
         this.load.image('circle','assets/navi.png');
         this.load.image('zelda','assets/zeldaaa.png');
         this.load.image('link','assets/linkraquete.png');
@@ -38,10 +38,12 @@ class Tableau1 extends Phaser.Scene{
         this.haut.setDisplaySize(this.largeur, 20)
         this.haut.body.setAllowGravity(false)
         this.haut.setImmovable(true);
+        this.haut.setVisible(false)
         this.bas = this.physics.add.sprite(0, 480, 'square').setOrigin(0, 0)
         this.bas.setDisplaySize(this.largeur, 20)
         this.bas.body.setAllowGravity(false)
         this.bas.setImmovable(true);
+        this.bas.setVisible(false)
         this.player1 = this.physics.add.sprite(50, 360, 'link')
         this.player1.setDisplaySize(40, 100)
         this.player1.body.setAllowGravity(false)
